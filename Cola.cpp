@@ -64,7 +64,7 @@ void Cola::mostrar()
     int contador = 1;
     while(aux) {
         cout << "\t" << contador << ". ";
-        aux->Aficionado.mostrar();
+        aux->aficionado.mostrar();
         aux = aux->siguiente;
         contador++;
     }
