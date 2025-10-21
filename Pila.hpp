@@ -1,5 +1,6 @@
 #include "NodoPila.hpp"
 #include <iostream>
+#include "Aficionado.hpp"
 using namespace std;
 
 class Pila

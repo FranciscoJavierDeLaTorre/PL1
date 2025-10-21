@@ -1,4 +1,5 @@
 #include "NodoCola.hpp"
+#include "Aficionado.hpp"
 
 class Cola
 {
@@ -6,8 +7,8 @@ public:
     Cola();
     ~Cola();
     void insertar(Aficionado afic);
-    int extraer();
-    int primero();
+    Aficionado extraer();
+    Aficionado primero();
     void mostrar();
     int getLongitud();
 

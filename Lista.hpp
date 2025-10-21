@@ -1,6 +1,6 @@
 #ifndef LISTA_HPP
 #define LISTA_HPP
-
+#include "Aficionado.hpp"
 #include "NodoLista.hpp"
 
 class Lista

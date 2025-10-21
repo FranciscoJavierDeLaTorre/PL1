@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstddef>
+#include "Aficionado.hpp"
 using namespace std;
 
 class NodoCola
