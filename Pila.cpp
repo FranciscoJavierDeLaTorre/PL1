@@ -1,39 +1,43 @@
+#include <iostream>
 #include "Pila.hpp"
+using namespace std;
 
 Pila::Pila()
 {
-    ultimo = NULL;
+    ultimo = nullptr;
     longitud = 0;
 }
 
-void Pila::insertar(int v)
+void Pila::insertar(const Aficionado& a)
 {
-    pnodoPila nuevo;
-    nuevo = new NodoPila(v, ultimo);
+    pnodoPila nuevo = new NodoPila(a, ultimo)
+    nuevo = new NodoPila(a, ultimo);
     ultimo = nuevo;
     longitud++;
 }
 
 int Pila::extraer()
 {
-    pnodoPila nodo;
-    int v;
-    if(!ultimo)
-        return 0;
-    nodo = ultimo;
-    ultimo = nodo->siguiente;
-    v = nodo->valor;
-    longitud--;
-    delete nodo;
-    return v;
+    if (!ultimo){
+		cout << "La pila esta vacia." << endl;
+		return Aficionado();
+		}
+	pnodoPila nodo = ultimo;
+	ultimo = nodo ->siguiente;
+	
+	Aficionado a = nodo->valor;
+	delete nodo;
+	longitud--;
+	return a;
 }
 
 int Pila::cima()
 {
-    pnodoPila nodo;
-    if(!ultimo)
-        return 0;
-    return ultimo->valor;
+    if (!ultimo) {
+		cout << "la pila esta vacia." << endl;
+		return Aficionado();
+		}
+		return ultimo->valor
 }
 
 void Pila::mostrar()
@@ -41,7 +45,7 @@ void Pila::mostrar()
     pnodoPila aux = ultimo;
     cout << "\tEl contenido de la pila es: ";
     while(aux) {
-        cout << "-> " << aux->valor;
+        cout << "-> " << aux->valor.mostrar();
         aux = aux->siguiente;
     }
     cout << endl;

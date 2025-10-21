@@ -1,8 +1,8 @@
 #include "NodoPila.hpp"
 
-NodoPila::NodoPila(int v, NodoPila* sig)
+NodoPila::NodoPila(const Aficionado& a, NodoPila* sig)
 {
-    valor = v;
+    valor = a;
     siguiente = sig;
 }
 
