@@ -1,5 +1,6 @@
 #include "Gestor.hpp"
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 
 // ============================================================================
@@ -92,6 +93,7 @@ void Gestor::genera10Aficionados()
 		// Mostrar información
 		cout << "\t" << (i+1) << ". ";
 		afic.mostrar();
+		system("pause");
 	}
 	
 	cout << "\t" << string(60, '-') << endl;

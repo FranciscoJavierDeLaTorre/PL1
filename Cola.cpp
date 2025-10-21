@@ -1,4 +1,7 @@
 #include "Cola.hpp"
+#include <iostream>
+#include <cstddef>
+using namespace std;
 
 Cola::Cola()
 {

@@ -1,3 +1,4 @@
+#include <iostream>
 #include "NodoCola.hpp"
 
 NodoCola::NodoCola(Aficionado afic, NodoCola* sig)
