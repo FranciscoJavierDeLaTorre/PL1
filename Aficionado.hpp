@@ -13,7 +13,7 @@ public:
 	int getID();
 	void setID(int ID);
 	void setHora_llegada(int hora);
-	voit setEs_socio(bool socio);
+	void setEs_socio(bool socio);
 
 private:
 	int 	ID;
