@@ -2,11 +2,6 @@
 #include <iostream>
 #include <cstdlib>
 using namespace std;
-
-// ============================================================================
-// CONSTRUCTOR Y DESTRUCTOR
-// ============================================================================
-
 Gestor::Gestor()
 {
 	// Inicializar las estructuras de datos
@@ -30,10 +25,6 @@ Gestor::~Gestor()
 	delete colaSimpatizantes;
 	delete listaAficionados;
 }
-
-// ============================================================================
-// MÉTODOS PARA OBTENER CANTIDADES (para mostrar en el menú)
-// ============================================================================
 
 int Gestor::AficionadosEnPila()
 {
@@ -97,7 +88,7 @@ void Gestor::genera10Aficionados()
 	}
 	
 	cout << "\t" << string(60, '-') << endl;
-	cout << "\t✓ 10 aficionados generados y almacenados en la pila." << endl;
+	cout << "\t 10 aficionados generados y almacenados en la pila." << endl;
 	
 	// Incrementar el contador para la próxima generación
 	contadorGeneracion++;
@@ -128,7 +119,7 @@ void Gestor::borraAficionadosPila()
 	
 	if(pilaAficionados->getLongitud() == 0)
 	{
-		cout << "\t⚠ La pila ya está vacía." << endl;
+		cout << "\t La pila ya está vacía." << endl;
 		return;
 	}
 	
@@ -140,7 +131,7 @@ void Gestor::borraAficionadosPila()
 		pilaAficionados->extraer();
 	}
 	
-	cout << "\t✓ " << cantidad << " aficionados eliminados de la pila." << endl;
+	cout << "\t " << cantidad << " aficionados eliminados de la pila." << endl;
 }
 
 // ============================================================================
@@ -152,7 +143,7 @@ void Gestor::encolarAficionados()
 	
 	if(pilaAficionados->getLongitud() == 0)
 	{
-		cout << "\t⚠ La pila está vacía. No hay aficionados para encolar." << endl;
+		cout << "\t La pila está vacía. No hay aficionados para encolar." << endl;
 		return;
 	}
 	
@@ -178,7 +169,7 @@ void Gestor::encolarAficionados()
 	}
 	
 	cout << "\t" << string(60, '-') << endl;
-	cout << "\t✓ Aficionados encolados:" << endl;
+	cout << "\t Aficionados encolados:" << endl;
 	cout << "\t  - Socios: " << socios << endl;
 	cout << "\t  - Simpatizantes: " << simpatizantes << endl;
 	cout << "\t  - Total: " << (socios + simpatizantes) << endl;
@@ -193,7 +184,7 @@ void Gestor::muestraSociosCola()
 	
 	if(colaSocios->getLongitud() == 0)
 	{
-		cout << "\t⚠ La cola de socios está vacía." << endl;
+		cout << "\t La cola de socios está vacía." << endl;
 		return;
 	}
 	
@@ -209,7 +200,7 @@ void Gestor::muestraSimpatizantesCola()
 	
 	if(colaSimpatizantes->getLongitud() == 0)
 	{
-		cout << "\t⚠ La cola de simpatizantes está vacía." << endl;
+		cout << "\t La cola de simpatizantes está vacía." << endl;
 		return;
 	}
 	
@@ -228,7 +219,7 @@ void Gestor::borraAficionadosColas()
 	
 	if(sociosEliminados == 0 && simpatizantesEliminados == 0)
 	{
-		cout << "\t⚠ Ambas colas ya están vacías." << endl;
+		cout << "\t Ambas colas ya están vacías." << endl;
 		return;
 	}
 	
@@ -244,7 +235,7 @@ void Gestor::borraAficionadosColas()
 		colaSimpatizantes->extraer();
 	}
 	
-	cout << "\t✓ Aficionados eliminados:" << endl;
+	cout << "\t Aficionados eliminados:" << endl;
 	cout << "\t  - Socios: " << sociosEliminados << endl;
 	cout << "\t  - Simpatizantes: " << simpatizantesEliminados << endl;
 	cout << "\t  - Total: " << (sociosEliminados + simpatizantesEliminados) << endl;
@@ -259,7 +250,7 @@ void Gestor::enlistarAficionados()
 	
 	if(colaSocios->getLongitud() == 0 && colaSimpatizantes->getLongitud() == 0)
 	{
-		cout << "\t⚠ Las colas están vacías. No hay aficionados para enlistar." << endl;
+		cout << "\t Las colas están vacías. No hay aficionados para enlistar." << endl;
 		return;
 	}
 	
@@ -267,7 +258,7 @@ void Gestor::enlistarAficionados()
 	int simpatizantesEnlistados = 0;
 	
 	// Primero extraer e insertar todos los SOCIOS (tienen prioridad)
-	cout << "\t→ Insertando socios ordenados por hora de llegada..." << endl;
+	cout << "\t Insertando socios ordenados por hora de llegada..." << endl;
 	while(colaSocios->getLongitud() > 0)
 	{
 		Aficionado afic = colaSocios->extraer();
@@ -276,7 +267,7 @@ void Gestor::enlistarAficionados()
 	}
 	
 	// Luego extraer e insertar todos los SIMPATIZANTES
-	cout << "\t→ Insertando simpatizantes ordenados por hora de llegada..." << endl;
+	cout << "\t Insertando simpatizantes ordenados por hora de llegada..." << endl;
 	while(colaSimpatizantes->getLongitud() > 0)
 	{
 		Aficionado afic = colaSimpatizantes->extraer();
@@ -285,7 +276,7 @@ void Gestor::enlistarAficionados()
 	}
 	
 	cout << "\t" << string(60, '-') << endl;
-	cout << "\t✓ Aficionados enlistados ordenadamente:" << endl;
+	cout << "\ Aficionados enlistados ordenadamente:" << endl;
 	cout << "\t  - Socios: " << sociosEnlistados << endl;
 	cout << "\t  - Simpatizantes: " << simpatizantesEnlistados << endl;
 	cout << "\t  - Total: " << (sociosEnlistados + simpatizantesEnlistados) << endl;
@@ -300,7 +291,7 @@ void Gestor::buscarAficionados()
 	
 	if(listaAficionados->getLongitud() == 0)
 	{
-		cout << "\t⚠ La lista está vacía. No hay aficionados para buscar." << endl;
+		cout << "\t La lista está vacía. No hay aficionados para buscar." << endl;
 		return;
 	}
 	
@@ -348,13 +339,13 @@ void Gestor::reiniciar()
 	if(listaAficionados->getLongitud() > 0)
 	{
 		listaAficionados->vaciar();
-		cout << "\t✓ Lista vaciada." << endl;
+		cout << "\t Lista vaciada." << endl;
 	}
 	
 	// Reiniciar el contador de generación
 	contadorGeneracion = 0;
 	
 	cout << "\t" << string(60, '-') << endl;
-	cout << "\t✓ Programa reiniciado correctamente." << endl;
+	cout << "\t Programa reiniciado correctamente." << endl;
 	cout << "\t  Todas las estructuras han sido vaciadas." << endl;
 }
