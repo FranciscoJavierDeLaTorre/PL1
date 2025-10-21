@@ -1,18 +1,22 @@
-#include <iostream>
-#include <cstddef>
+#ifndef NODOCOLA_HPP
+#define NODOCOLA_HPP
+
 #include "Aficionado.hpp"
-using namespace std;
 
-class NodoCola
-{
+// Declaración de la estructura del nodo de la cola
+class NodoCola {
 public:
-    NodoCola(Aficionado afic, NodoCola* sig = NULL);
-    ~NodoCola();
-
-private:
-    int valor;
+    Aficionado aficionado;
     NodoCola* siguiente;
-    friend class Cola;
+
+    // Constructor
+    NodoCola(Aficionado afic) {
+        aficionado = afic;
+        siguiente = nullptr;
+    }
 };
 
+// Definición del tipo puntero a NodoCola para simplificar
 typedef NodoCola* pnodoCola;
+
+#endif // NODOCOLA_HPP
