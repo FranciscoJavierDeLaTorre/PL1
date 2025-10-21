@@ -7,9 +7,9 @@ Cola::Cola()
     longitud = 0;
 }
 
-void Cola::insertar(int v)
+void Cola::insertar(Aficionado afic)
 {
-    pnodoCola nuevo = new NodoCola(v);
+    pnodoCola nuevo = new NodoCola(afic);
     
     if(ultimo)
         ultimo->siguiente = nuevo;
@@ -22,47 +22,64 @@ void Cola::insertar(int v)
     longitud++;
 }
 
-int Cola::extraer()
+Aficionado Cola::extraer()
 {
     pnodoCola nodo;
-    int v;
+    Aficionado afic;
     
     if(!primeroPtr)
-        return 0;
+        return Aficionado(); // Retorna un aficionado vacío si la cola está vacía
     
     nodo = primeroPtr;
     primeroPtr = nodo->siguiente;
-    v = nodo->valor;
+    afic = nodo->aficionado;
     
     if(!primeroPtr)
         ultimo = NULL;
     
     longitud--;
     delete nodo;
-    return v;
+    return afic;
 }
 
-int Cola::primero()
+Aficionado Cola::primero()
 {
     if(!primeroPtr)
-        return 0;
-    return primeroPtr->valor;
+        return Aficionado(); // Retorna un aficionado vacío si la cola está vacía
+    
+    return primeroPtr->aficionado;
 }
 
 void Cola::mostrar()
 {
     pnodoCola aux = primeroPtr;
-    cout << "\tEl contenido de la cola es: ";
-    while(aux) {
-        cout << "-> " << aux->valor;
-        aux = aux->siguiente;
+    
+    if(!aux)
+    {
+        cout << "\t⚠ La cola está vacía." << endl;
+        return;
     }
-    cout << endl;
+    
+    cout << "\t" << string(60, '-') << endl;
+    int contador = 1;
+    while(aux) {
+        cout << "\t" << contador << ". ";
+        aux->aficionado.mostrar();
+        aux = aux->siguiente;
+        contador++;
+    }
+    cout << "\t" << string(60, '-') << endl;
+    cout << "\tTotal en cola: " << longitud << endl;
 }
 
 int Cola::getLongitud()
 {
     return this->longitud;
+}
+
+bool Cola::estaVacia()
+{
+    return primeroPtr == NULL;
 }
 
 Cola::~Cola()
