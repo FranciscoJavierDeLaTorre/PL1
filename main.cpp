@@ -57,34 +57,34 @@ int main(int argc, char** argv)
 		switch(opcion) {
 
 		case 'A':
-			gestor.genera10Aficionados();
+			Gestor.genera10Aficionados();
 			break;
 		case 'B':
-			gestor.muestraAficionados();
+			Gestor.muestraAficionados();
 			break;
 		case 'C':
-			gestor.borraAficionadosPila();
+			Gestor.borraAficionadosPila();
 			break;
 		case 'D':
-			gestor.encolarAficionados();
+			Gestor.encolarAficionados();
 			break;
 		case 'E':
-			gestor.muestraSociosCola();
+			Gestor.muestraSociosCola();
 			break;
 		case 'F':
-			gestor.muestraSimpatizantesCola();
+			Gestor.muestraSimpatizantesCola();
 			break;
 		case 'G':
-			gestor.borraAficionadosColas();
+			Gestor.borraAficionadosColas();
 			break;
 		case 'H':
-			gestor.enlistarAficionados();
+			Gestor.enlistarAficionados();
 			break;
 		case 'I':
-			gestor.buscarAficionados();
+			Gestor.buscarAficionados();
 			break;
 		case 'J':
-			gestor.reiniciar();
+			Gestor.reiniciar();
 			break;
 		case 'K':
 			//...;

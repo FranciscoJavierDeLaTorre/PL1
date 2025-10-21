@@ -11,6 +11,7 @@ public:
     Aficionado primero();
     void mostrar();
     int getLongitud();
+	bool estaVacia();
 
 private:
     pnodoCola primeroPtr;

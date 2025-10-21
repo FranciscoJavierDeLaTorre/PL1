@@ -10,13 +10,13 @@ Pila::Pila()
 
 void Pila::insertar(Aficionado afic)
 {
-    pnodoPila nuevo = new NodoPila(a, ultimo)
+    pnodoPila nuevo = new NodoPila(afic, ultimo);
     nuevo = new NodoPila(afic, ultimo);
     ultimo = nuevo;
     longitud++;
 }
 
-int Pila::extraer()
+Aficionado Pila::extraer()
 {
     if (!ultimo){
 		cout << "La pila esta vacia." << endl;
@@ -31,13 +31,13 @@ int Pila::extraer()
 	return afic;
 }
 
-int Pila::cima()
+Aficionado Pila::cima()
 {
     if (!ultimo) {
 		cout << "la pila esta vacia." << endl;
 		return Aficionado();
 		}
-		return ultimo->valor
+		return ultimo->valor;
 }
 
 void Pila::mostrar()
