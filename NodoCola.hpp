@@ -1,7 +1,6 @@
-#ifndef NODOCOLA_HPP
-#define NODOCOLA_HPP
-
-#include "Aficionado.hpp"
+#include <iostream>
+#include <cstddef>
+using namespace std;
 
 class NodoCola
 {
@@ -10,11 +9,9 @@ public:
     ~NodoCola();
 
 private:
-    Aficionado aficionado;
+    int valor;
     NodoCola* siguiente;
     friend class Cola;
 };
 
 typedef NodoCola* pnodoCola;
-
-#endif // NODOCOLA_HPP

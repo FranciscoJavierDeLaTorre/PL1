@@ -1,5 +1,9 @@
+#ifndef NODOPILA_HPP
+#define NODOPILA_HPP
 #include <iostream>
+#include "Aficionado.hpp"
 using namespace std;
+
 
 class NodoPila
 {

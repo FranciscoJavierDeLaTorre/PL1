@@ -1,4 +1,5 @@
 #include "NodoLista.hpp"
+#include <cstddef>
 
 NodoLista::NodoLista(Aficionado afic, NodoLista* sig)
 {

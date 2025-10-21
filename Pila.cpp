@@ -11,7 +11,7 @@ Pila::Pila()
 void Pila::insertar(Aficionado afic)
 {
     pnodoPila nuevo = new NodoPila(a, ultimo)
-    nuevo = new NodoPila(a, ultimo);
+    nuevo = new NodoPila(afic, ultimo);
     ultimo = nuevo;
     longitud++;
 }
@@ -25,10 +25,10 @@ int Pila::extraer()
 	pnodoPila nodo = ultimo;
 	ultimo = nodo ->siguiente;
 	
-	Aficionado a = nodo->valor;
+	Aficionado afic = nodo->valor;
 	delete nodo;
 	longitud--;
-	return a;
+	return afic;
 }
 
 int Pila::cima()

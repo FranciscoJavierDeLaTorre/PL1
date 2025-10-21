@@ -2,7 +2,7 @@
 
 NodoPila::NodoPila(Aficionado afic, NodoPila* sig)
 {
-    valor = a;
+    valor = afic;
     siguiente = sig;
 }
 

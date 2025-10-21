@@ -1,6 +1,6 @@
 #ifndef NODOLISTA_HPP
 #define NODOLISTA_HPP
-
+#include <cstddef>
 #include "Aficionado.hpp"
 
 class NodoLista
