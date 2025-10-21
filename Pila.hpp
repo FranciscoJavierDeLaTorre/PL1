@@ -1,13 +1,15 @@
 #include "NodoPila.hpp"
+#include <iostream>
+using namespace std;
 
 class Pila
 {
 public:
     Pila();
     ~Pila();
-    void insertar(Aficionado);
-    int extraer();
-    int cima();
+    void insertar(Aficionado afic);
+    Aficionado extraer();
+    Aficionado cima();
     void mostrar();
     int getLongitud();
 

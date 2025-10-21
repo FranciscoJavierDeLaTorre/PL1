@@ -8,7 +8,7 @@ Pila::Pila()
     longitud = 0;
 }
 
-void Pila::insertar(const Aficionado& a)
+void Pila::insertar(Aficionado afic)
 {
     pnodoPila nuevo = new NodoPila(a, ultimo)
     nuevo = new NodoPila(a, ultimo);

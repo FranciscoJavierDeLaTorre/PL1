@@ -4,7 +4,7 @@ using namespace std;
 class NodoPila
 {
 public:
-    NodoPila(const Aficionado& a, NodoPila* sig = NULL);
+    NodoPila(Aficionado afic, NodoPila* sig = NULL);
     ~NodoPila();
 
 private:
