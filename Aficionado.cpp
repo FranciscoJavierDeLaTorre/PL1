@@ -17,7 +17,7 @@ Aficionado::Aficionado(int ID, int hora_llegada)
 	this->hora_llegada = hora_llegada;
 	
 	// Si el ID es par, es socio; si es impar, es simpatizante
-	if(ID % 2 == 0)
+	if(rand() % 2 == 0)
 		this->es_socio = true;
 	else
 		this->es_socio = false;

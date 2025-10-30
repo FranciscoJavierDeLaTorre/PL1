@@ -9,17 +9,6 @@ int main(int argc, char** argv)
 
 	do {
 
-		cout << "\n\t--------------------------------------------------------------"
-				"--------\n";
-		cout << "\tAficionados en la pila -> " << 0 /*gestor.AficionadosEnPila()*/
-			 << "\n\tAficionados en las colas:\n \t\tSocios-> " << 0 /*gestor.SociosEnCola() */ << "\tSimpatizantes-> "
-			 << 0 /*gestor.SimpatizantesEnCola() */
-			 << " \n\tAficionados en la lista -> " << 0 /*gestor.AficionadosEnLista()*/
-			 << "\n\tAficionados en el arbol -> " << 0							  /*gestor.AficionadosEnArbol()*/
-			 << "\n";
-		cout << "\t----------------------------------------------------------------"
-				"------\n\n";
-
 		cout << "\tA. Generar 10 Aficionados de forma aleatoria y almacenarlos en la "
 				"Pila.\n";
 		cout << "\tB. Consultar todos los Aficionados generados en la Pila.\n";
@@ -33,19 +22,7 @@ int main(int argc, char** argv)
 				"el ultimo socio, el primer simpatizante y "
 				"el ultimo Aficionado que acceden al estadio.\n";
 		cout << "\tJ. Reiniciar el programa.\n";
-		cout << "\tK. Crear y dibujar el ABB en consola.\n";
-		cout << "\tL. Mostrar los datos de todos los socios ordenados "
-				"por sus IDs de menor a mayor.\n";
-		cout << "\tM. Mostrar los datos de todos los simpatizantes ordenados "
-				"por sus IDs de menor a mayor.\n";
-		cout << "\tN. Mostrar los datos de todos los Aficionados recorriendo el arbol "
-				"en inorden.\n";
-		cout << "\tO. Buscar en el ABB el primer Aficionado, "
-				"el ultimo socio, el primer simpatizante y "
-				"el ultimo Aficionado que acceden al estadio.\n";
-		cout << "\tP. Mostrar el numero de aficionados en el ABB cuyos ID's son pares.\n";
-		cout << "\tQ. Mostrar los aficionados que se encuentran almacenados en un nodo hoja.\n";
-		cout << "\tR. Eliminar un aficionado indicado por su ID. Mostrar el arbol antes y despues tras la eliminacion de dicho aficionado.\n";
+		
 		cout << "\tS. Salir.\n\n";
 
 		cout << "\tIndique la opcion deseada: ";

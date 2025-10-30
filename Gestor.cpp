@@ -84,11 +84,12 @@ void Gestor::genera10Aficionados()
 		// Mostrar información
 		cout << "\t" << (i+1) << ". ";
 		afic.mostrar();
-		system("pause");
+	
 	}
 	
 	cout << "\t" << string(60, '-') << endl;
 	cout << "\t 10 aficionados generados y almacenados en la pila." << endl;
+	
 	
 	// Incrementar el contador para la próxima generación
 	contadorGeneracion++;
@@ -99,11 +100,11 @@ void Gestor::genera10Aficionados()
 // ============================================================================
 void Gestor::muestraAficionados()
 {
-	cout << "\n\t=== AFICIONADOS EN LA PILA ===" << endl;
+	cout << "\n\t=== AFICIONADOS EN LA PILA ===\n" << endl;
 	
 	if(pilaAficionados->getLongitud() == 0)
 	{
-		cout << "\t⚠ La pila está vacía. Use la opción A para generar aficionados." << endl;
+		cout << "\t La pila está vacía. Use la opción A para generar aficionados." << endl;
 		return;
 	}
 	
