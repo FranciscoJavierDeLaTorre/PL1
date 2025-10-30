@@ -14,7 +14,7 @@ public:
 	Gestor();
 	~Gestor();
 	
-	// Métodos para obtener cantidades (para mostrar en el menú)
+	// Métodos para obtener cantidades (obsoleto, hay q quitar, con cuidado q no se en q mas lo has metido)
 	int AficionadosEnPila();
 	int SociosEnCola();
 	int SimpatizantesEnCola();

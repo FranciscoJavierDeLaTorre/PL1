@@ -59,7 +59,7 @@ void Cola::mostrar()
     
     if(!aux)
     {
-        cout << "\t⚠ La cola está vacía." << endl;
+        cout << "\t La cola está vacía." << endl;
         return;
     }
     

@@ -52,9 +52,7 @@ int Gestor::AficionadosEnArbol()
 	return 0;
 }
 
-// ============================================================================
 // OPCIÓN A: Generar 10 aficionados aleatorios y almacenarlos en la pila
-// ============================================================================
 void Gestor::genera10Aficionados()
 {
 	cout << "\n\t=== GENERANDO 10 AFICIONADOS ALEATORIOS ===" << endl;
@@ -69,19 +67,15 @@ void Gestor::genera10Aficionados()
 	// Generar 10 aficionados
 	for(int i = 0; i < 10; i++)
 	{
-		// Generar ID único dentro del rango
 		int id = idInicio + i;
-		
-		// Generar hora de llegada aleatoria (0-59 minutos desde las 18:00)
+
 		int hora = rand() % 60;
 		
-		// Crear el aficionado (el constructor determina si es socio o simpatizante)
+		//(el constructor determina si es socio o simpatizante)
 		Aficionado afic(id, hora);
-		
-		// Insertar en la pila
+
 		pilaAficionados->insertar(afic);
-		
-		// Mostrar información
+
 		cout << "\t" << (i+1) << ". ";
 		afic.mostrar();
 	
@@ -95,9 +89,7 @@ void Gestor::genera10Aficionados()
 	contadorGeneracion++;
 }
 
-// ============================================================================
 // OPCIÓN B: Mostrar todos los aficionados almacenados en la pila
-// ============================================================================
 void Gestor::muestraAficionados()
 {
 	cout << "\n\t=== AFICIONADOS EN LA PILA ===\n" << endl;
@@ -111,9 +103,7 @@ void Gestor::muestraAficionados()
 	pilaAficionados->mostrar();
 }
 
-// ============================================================================
 // OPCIÓN C: Borrar todos los aficionados de la pila
-// ============================================================================
 void Gestor::borraAficionadosPila()
 {
 	cout << "\n\t=== BORRANDO AFICIONADOS DE LA PILA ===" << endl;
@@ -131,13 +121,11 @@ void Gestor::borraAficionadosPila()
 	{
 		pilaAficionados->extraer();
 	}
-	
+	//y si destruyo la pila y hago una nueva k?
 	cout << "\t " << cantidad << " aficionados eliminados de la pila." << endl;
 }
 
-// ============================================================================
 // OPCIÓN D: Encolar aficionados (extraer de pila e insertar en colas)
-// ============================================================================
 void Gestor::encolarAficionados()
 {
 	cout << "\n\t=== ENCOLANDO AFICIONADOS ===" << endl;
@@ -176,9 +164,7 @@ void Gestor::encolarAficionados()
 	cout << "\t  - Total: " << (socios + simpatizantes) << endl;
 }
 
-// ============================================================================
 // OPCIÓN E: Mostrar la cola de socios
-// ============================================================================
 void Gestor::muestraSociosCola()
 {
 	cout << "\n\t=== COLA DE SOCIOS ===" << endl;
@@ -192,9 +178,7 @@ void Gestor::muestraSociosCola()
 	colaSocios->mostrar();
 }
 
-// ============================================================================
 // OPCIÓN F: Mostrar la cola de simpatizantes
-// ============================================================================
 void Gestor::muestraSimpatizantesCola()
 {
 	cout << "\n\t=== COLA DE SIMPATIZANTES ===" << endl;
@@ -208,9 +192,7 @@ void Gestor::muestraSimpatizantesCola()
 	colaSimpatizantes->mostrar();
 }
 
-// ============================================================================
 // OPCIÓN G: Borrar todos los aficionados de ambas colas
-// ============================================================================
 void Gestor::borraAficionadosColas()
 {
 	cout << "\n\t=== BORRANDO AFICIONADOS DE LAS COLAS ===" << endl;
@@ -242,9 +224,7 @@ void Gestor::borraAficionadosColas()
 	cout << "\t  - Total: " << (sociosEliminados + simpatizantesEliminados) << endl;
 }
 
-// ============================================================================
 // OPCIÓN H: Enlistar aficionados (extraer de colas e insertar ordenados en lista)
-// ============================================================================
 void Gestor::enlistarAficionados()
 {
 	cout << "\n\t=== ENLISTANDO AFICIONADOS ===" << endl;
@@ -258,7 +238,7 @@ void Gestor::enlistarAficionados()
 	int sociosEnlistados = 0;
 	int simpatizantesEnlistados = 0;
 	
-	// Primero extraer e insertar todos los SOCIOS (tienen prioridad)
+	// Primero extraer e insertar todos los SOCIOS (prioridad)
 	cout << "\t Insertando socios ordenados por hora de llegada..." << endl;
 	while(colaSocios->getLongitud() > 0)
 	{
@@ -267,7 +247,7 @@ void Gestor::enlistarAficionados()
 		sociosEnlistados++;
 	}
 	
-	// Luego extraer e insertar todos los SIMPATIZANTES
+	// Luego extraer e insertar todos los SIMPATIZANTES (no prioridad)
 	cout << "\t Insertando simpatizantes ordenados por hora de llegada..." << endl;
 	while(colaSimpatizantes->getLongitud() > 0)
 	{
@@ -283,9 +263,7 @@ void Gestor::enlistarAficionados()
 	cout << "\t  - Total: " << (sociosEnlistados + simpatizantesEnlistados) << endl;
 }
 
-// ============================================================================
 // OPCIÓN I: Buscar y mostrar aficionados específicos en la lista
-// ============================================================================
 void Gestor::buscarAficionados()
 {
 	cout << "\n\t=== BÚSQUEDA DE AFICIONADOS EN LA LISTA ===" << endl;
@@ -324,10 +302,10 @@ void Gestor::buscarAficionados()
 	
 	cout << "\t" << string(60, '-') << endl;
 }
+//hay q mirar lo d q siempre coincidan
 
-// ============================================================================
+
 // OPCIÓN J: Reiniciar el programa a su estado inicial
-// ============================================================================
 void Gestor::reiniciar()
 {
 	cout << "\n\t=== REINICIANDO EL PROGRAMA ===" << endl;

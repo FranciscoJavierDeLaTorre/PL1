@@ -15,7 +15,7 @@ public:
     bool estaVacia();
     void vaciar();
     
-    // Métodos para buscar aficionados específicos (Opción I)
+    // Métodos para buscar aficionados específicos pa lña I)
     Aficionado getPrimero();
     Aficionado getUltimo();
     Aficionado getUltimoSocio();

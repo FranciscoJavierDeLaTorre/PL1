@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-// Constructor por defecto
+// Constructor base
 Aficionado::Aficionado()
 {
 	this->ID = 0;
@@ -10,7 +10,7 @@ Aficionado::Aficionado()
 	this->es_socio = false;
 }
 
-// Constructor con parámetros
+// Constructor par
 Aficionado::Aficionado(int ID, int hora_llegada)
 {
 	this->ID = ID;
@@ -59,7 +59,6 @@ void Aficionado::setEs_socio(bool socio)
 	this->es_socio = socio;
 }
 
-// Método para mostrar la información del aficionado
 void Aficionado::mostrar()
 {
 	cout << "ID: " << ID 
