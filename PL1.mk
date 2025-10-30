@@ -14,7 +14,11 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=germa
+<<<<<<< Updated upstream
 Date                   :=10/31/2025
+=======
+Date                   :=10/30/2025
+>>>>>>> Stashed changes
 CodeLitePath           :=C:/Users/germa/Downloads/codelite-amd64-17.0.0/codelite-amd64-17.0.0/codelite
 MakeDirCommand         :=mkdir
 LinkerName             :=g++
